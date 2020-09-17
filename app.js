@@ -20,7 +20,7 @@ var campgroundRoutes    = require("./routes/campgrounds"),
 
 mongoose.Promise = global.Promise;
 
-const databaseUri = process.env.MONGODB_URI || 'mongodb+srv://PedroPataro:'+ process.env.API_KEY +'@cluster0.x59fi.gcp.mongodb.net/yelp_camp?retryWrites=true&w=majority';
+const databaseUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/yelp_camp';
 
 mongoose.connect(databaseUri, { useNewUrlParser: true })
         .then(() => console.log(`Database connected`))
